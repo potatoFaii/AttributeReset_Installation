@@ -15,7 +15,7 @@ def createShelfButton():
     shelf = mel.eval('$gShelfTopLevel=$gShelfTopLevel')
     currentShelf = cmds.tabLayout(shelf, q=True, selectTab=True)
     if cmds.shelfButton(btnName, exists=True):
-        cmds.warning("{} already installed.".format(label))
+        cmds.warning("{} already installed.".format(labelName))
         return
     
     command = '''import maya.cmds as cmds
